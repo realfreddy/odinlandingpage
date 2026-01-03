@@ -2,127 +2,171 @@ body {
     font-family: Roboto, sans-serif;
     display: flex;
     flex-direction: column;
+    padding: 0;
+    margin: 0;
 }
-.header{
+
+.header {
     display: flex;
     justify-content: space-between;
     background-color: #1f2937;
-    padding: 16px;
+    padding: 2em 4em;
 }
-ul{
+
+ul {
     display: flex;
     list-style: none;
     margin: 0;
-  padding: 0;
-  gap: 16px
-
+    padding: 16px;
+    gap: 16px; /* added missing semicolon */
 }
-a{
+
+a {
     color: lightgray;
     text-decoration: none;
 }
-.header img{
-    width: 150px; 
-  height: auto;
+
+.header img {
+    width: 150px;
+    height: auto;
 }
-.herocontainer{
+
+.herocontainer {
     display: flex;
     background-color: #1f2937;
-    justify-content: space-between;
     align-items: center;
-    padding: 50px;
-    gap: 70px;
+    justify-content: center;
+    gap: 50px;
+    padding: 60px;
 }
+
 .buttonandtext h2 {
     font-size: 48px;
     color: #f9faf8;
     font-weight: 900;
     margin: 0;
 }
-.buttonandtext p{
+
+.buttonandtext p {
     font-size: 18px;
     color: #e5e7eb;
     margin-top: 0;
 }
+
 button {
-    font-family: Roboto, sans-serif;
+    display: block;
+    text-align: center;
+    width: 110px;
     border: none;
-    border-radius: 8px;
     background: #3882f6;
-    color: white;
-    padding: 8px 20px;
-  }
-.buttonandtext{
-    flex: 1;
+    padding: 10px;
+    border-radius: 8px;
+    color: #fff;
+    font-family: 'Roboto', Arial, sans-serif; /* minor cleanup */
+    text-decoration: none;
+    font-weight: bold;
+    cursor: pointer; /* added for UX */
 }
-.heroright img{
+
+.buttonandtext {
+    flex-basis: 300px;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+}
+
+.heroright img {
     width: 400px;
-    height: 200px;
+    height: auto; /* changed from fixed height to keep aspect ratio */
 }
-.heroright{
+
+.heroright {
+    display: flex;
+    justify-content: flex-start;
     padding: 16px;
+    flex: 0 0 auto;
 }
-.randominfo{
+
+.randominfo {
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
 }
-h3{
+
+h3 {
     font-size: 36px;
     color: #1f2937;
     font-weight: 900;
 }
-.card{
+
+.card {
     height: 150px;
     width: 200px;
-    border: 5px solid lightskyblue;
+    border: 5px solid #3882f6;
     border-radius: 15px;
     text-align: center;
+    overflow: hidden; 
 }
+
 .card img {
-    width: 100%;              
-    height: 100%;               
-    display: block;              
-    margin-bottom: 10px;         
-  }
-.cards{
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.cards {
     display: flex;
     justify-content: center;
     gap: 15px;
-    flex-wrap: wrap;             /* wraps to next line if screen is small */
-    margin: 50px 0;   
+    flex-wrap: wrap; 
+    margin: 50px 0;
 }
-.cards .text{
-    color: lightskyblue;
+
+.cards .text {
+    color: #3882f6;
 }
-.quote{
+
+.quote {
     background-color: #e5e7eb;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     padding: 50px 50px;
 }
-.quotetext {
+
+.quote p{
     font-size: 36px;
     color: #1f2937;
     font-weight: 300;
 }
-.calltoaction{
+.quote b{
+    text-align: right;
+}
+.cta {
+    background-color: #3882F6;
+    margin: 50px 200px;
+    padding: 10px 80px;
     display: flex;
     justify-content: space-between;
-    border: 5px solid red ;
+    align-items: center;
+    border-radius: 5px;
+}
+
+.ctatext {
     color: white;
 }
-.cta{
-    display: flex;
-    border: 3px solid brown;
-    justify-content: space-between;
+
+.ctabutton {
+    background-color: #3882f6;
+    border: 2px solid white; 
 }
-.ctatext{
-    color: #1f2937;
-}
-.ctabutton{
-    background-color:#3882f6;
-    border: 2px solid white
+.footer{
+    background-color: #1f2937;
+    color: lightgray;
+    text-align: center;
+    height: 75px;
 }
